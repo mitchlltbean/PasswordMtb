@@ -7,7 +7,7 @@
 //var finalArray =  
 //TODO: create an empty array for user requested charecters
 var newPassarray = []
-var bigArray= newPassarray.join(' ').trim()
+//var bigArray= join.newPassarray(separator)
 
 
 
@@ -51,7 +51,7 @@ function generatePassword(){
 
       newPassarray.push(upperCase[finalArrayupper])
 
-      bigArray = bigArray.concat(upperCase)
+      //bigArray = bigArray.concat(upperCase)
     }   
     
  // return(newPassarray)   
@@ -76,7 +76,7 @@ function generatePassword(){
     console.log(lowerCase[finalArrayupper])
       //push whole ar
     newPassarray.push(lowerCase[finalArrayupper])
-    bigArray = bigArray.concat(lowerCase)
+   // bigArray = bigArray.concat(lowerCase)
   } 
 
 //   //  return(newPassarray)
@@ -96,7 +96,7 @@ function generatePassword(){
     console.log(number[finalArrayupper])
       //push whole ar
     newPassarray.push(number[finalArrayupper])
-    bigArray = bigArray.concat(number)
+    //bigArray = bigArray.concat(number)
   }
   
 //   //  return(newPassarray)
@@ -116,7 +116,7 @@ function generatePassword(){
       console.log(char[finalArrayupper])
         //push whole ar
       newPassarray.push(char[finalArrayupper])
-      bigArray = bigArray.concat(char)
+      //bigArray = bigArray.concat(char)
 //      console.log(bigArray)
     }
     
@@ -130,8 +130,8 @@ function generatePassword(){
     
   
   
-  
-  return(bigArray)
+  return(newPassarray)
+  //return(bigArray)
 
 }
   
