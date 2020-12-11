@@ -51,8 +51,8 @@ function generatePassword(){
       newPassarray.push(upperCase[finalArrayupper])
 
       //bigArray = bigArray.concat(upperCase)
-      
-    }
+    }   
+    
  // return(newPassarray)   
     
 
@@ -76,7 +76,7 @@ function generatePassword(){
       //push whole ar
     newPassarray.push(lowerCase[finalArrayupper])
 //     bigArray = bigArray.concat(lowerCase)
-    
+  } 
 
 //   //  return(newPassarray)
 //  // }
@@ -96,7 +96,7 @@ function generatePassword(){
       //push whole ar
     newPassarray.push(number[finalArrayupper])
 //     bigArray = bigArray.concat(number)
-    
+  }
   
 //   //  return(newPassarray)
 
@@ -115,10 +115,11 @@ function generatePassword(){
       console.log(char[finalArrayupper])
         //push whole ar
       newPassarray.push(char[finalArrayupper])
-      bigArray = bigArray.concat(char)
-//       console.log(bigArray)
-       return(newPassarray)
-//     }
+ //     bigArray = bigArray.concat(char)
+//      console.log(bigArray)
+    }
+  return(newPassarray)
+}
   
 //   //TODO: create prompt  to ask user how long they want password tobe and set to var. Also user edge case of 8 to 128 charectors.
 
@@ -160,7 +161,6 @@ function generatePassword(){
 
 // }
 
-  }
-
+  
 // // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
