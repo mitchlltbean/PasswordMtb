@@ -50,25 +50,74 @@ function generatePassword(){
         //push whole ar
       newPassarray.push(upperCase[finalArrayupper])
       bigArray = bigArray.concat(upperCase)
-      console.log(bigArray)
-      return(newPassarray)
-    }
+      
+     
+      // return(newPassarray)
+    //}
 
     //if(upperselect === false){
-
 
     //}
 
 
-
   //TODO: create confirm to ask user if they want lower letters set to a variable
 
+  var lowerselect = confirm("Would u like uppercase letters in password?")
+            
+  if(lowerselect === true){
+    var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" ,];
+    
+    var finalArrayupper = (Math.floor(Math.random() * lowerCase.length));
+    
+    //var finalArrayupper = getRandomElement(upperCase[]);
+    
+    console.log(lowerCase[finalArrayupper])
+      //push whole ar
+    newPassarray.push(lowerCase[finalArrayupper])
+    bigArray = bigArray.concat(lowerCase)
+    
+
+  //  return(newPassarray)
+ // }
 
   //TODO: create confirm  to ask user if they want numbers set to a variable
 
+  var numselect = confirm("Would u like uppercase letters in password?")
+            
+  if(numselect === true){
+    var number = ["1" , "2" "3" ,"4" ,"5" ,"6" ,"7" ,"8" ,"9" ,];
+    
+    var finalArrayupper = (Math.floor(Math.random() * number.length));
+    
+    //var finalArrayupper = getRandomElement(upperCase[]);
+    
+    console.log(number[finalArrayupper])
+      //push whole ar
+    newPassarray.push(number[finalArrayupper])
+    bigArray = bigArray.concat(number)
+    
+  
+  //  return(newPassarray)
 
+  //}
   //TODO: create confirm  to ask user if they want special charecters set to a variable
 
+  var charselect = confirm("Would u like uppercase letters in password?")
+            
+    if(charselect === true){
+      var upperCase = ["~" , "`" , "!" , "@" , "#" , "$" , "%" , "^" , "&" , "*" , "(" , ")" , "_" , "-" , "+" , "=" , "{" , "[" , "}" , "]" , "|" , ":" , ";"];
+      
+      var finalArrayupper = (Math.floor(Math.random() * char.length));
+      
+      //var finalArrayupper = getRandomElement(upperCase[]);
+      
+      console.log(char[finalArrayupper])
+        //push whole ar
+      newPassarray.push(char[finalArrayupper])
+      bigArray = bigArray.concat(char)
+      console.log(bigArray)
+      return(bigArray)
+    }
   
   //TODO: create prompt  to ask user how long they want password tobe and set to var. Also user edge case of 8 to 128 charectors.
 
