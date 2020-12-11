@@ -1,16 +1,8 @@
-//TODO:create variables with arrays lower case, uc, special charect and numbers
 
-//var lowerCase = []
 
-//var special = []
-//var numbers = []
-//var finalArray =  
 //TODO: create an empty array for user requested charecters
 var newPassarray = []
-//var bigArray= join.newPassarray(separator)
-
-
-
+//var bigArray = []
 
 
 
@@ -34,9 +26,10 @@ function generatePassword(){
  var passLength = prompt("How long ? (8-128)")
    if (passLength<8 || passLength>128){
      alert("plz select a proper charector")
+
      return
    }
-  
+ 
   //create confirm to ask user if they want capital letters set to a variable
   var upperselect = confirm("Would u like uppercase letters in password?")
             
@@ -45,8 +38,6 @@ function generatePassword(){
       
       var finalArrayupper = (Math.floor(Math.random() * upperCase.length));
       
-      //var finalArrayupper = getRandomElement(upperCase[]);
-      
       console.log(upperCase[finalArrayupper])
 
       newPassarray.push(upperCase[finalArrayupper])
@@ -54,15 +45,13 @@ function generatePassword(){
       //bigArray = bigArray.concat(upperCase)
     }   
     
+ //   if(upperselect === false){
+      
+
  // return(newPassarray)   
-    
-
-//     //if(upperselect === false){
-
-//     //}
 
 
-//   //create confirm to ask user if they want lower letters set to a variable
+//create confirm to ask user if they want lower letters set to a variable
 
   var lowerselect = confirm("Would u like lowercase letters in password?")
             
@@ -79,10 +68,11 @@ function generatePassword(){
    // bigArray = bigArray.concat(lowerCase)
   } 
 
-//   //  return(newPassarray)
-//  // }
 
-//   //create confirm  to ask user if they want numbers set to a variable
+//  return(newPassarray)
+
+
+//create confirm  to ask user if they want numbers set to a variable
 
   var numselect = confirm("Would u like numbers in password?")
             
@@ -91,18 +81,16 @@ function generatePassword(){
     
     var finalArrayupper = (Math.floor(Math.random() * number.length));
     
-    //var finalArrayupper = getRandomElement(upperCase[]);
-    
     console.log(number[finalArrayupper])
       //push whole ar
     newPassarray.push(number[finalArrayupper])
     //bigArray = bigArray.concat(number)
   }
   
-//   //  return(newPassarray)
+//  return(newPassarray)
 
-//   //}
-//   //create confirm  to ask user if they want special charecters set to a variable
+
+//create confirm  to ask user if they want special charecters set to a variable
 
   var charselect = confirm("Would u like special charectors in password?")
             
@@ -110,8 +98,6 @@ function generatePassword(){
       var char = ["~" , "`" , "!" , "@" , "#" , "$" , "%" , "^" , "&" , "*" , "(" , ")" , "_" , "-" , "+" , "=" , "{" , "[" , "}" , "]" , "|" , ":" , ";"];
       
       var finalArrayupper = (Math.floor(Math.random() * char.length));
-      
-      //var finalArrayupper = getRandomElement(upperCase[]);
       
       console.log(char[finalArrayupper])
         //push whole ar
@@ -122,12 +108,7 @@ function generatePassword(){
     
     //TODO: create a condition to make sure that the user has chosen at least 1 type of charector.
      
-   // if(newPassarray === 0){
-    //  alert("plz select at least 1")
-    //  return
-
-   // }
-    
+   // i need a if statement with condition if all 4 criteria selectors were false to alert and reload.
   
   
   return(newPassarray)
@@ -137,21 +118,12 @@ function generatePassword(){
   
 
 
-  
+//  create if statements, that checks if the user said y or n to diffent confirms they answered, and base on thiere response push those specific charectors to the empty array
 
-
-
-
+// create a var to hold Final Results
 
   
-
-//   //TODO: create if statements, that checks if the user said y or n to diffent confirms they answered, and base on thiere response push those specific charectors to the empty array
-
-//   //TODO:create a var to hold Final Results
-
-//   //var finalPassword;
-  
-//   //TODO: I need a for loop to loop over my final array, it should run based on relts of the prompt when we asked user how many charectors they like password. Choose randomly from final array that holds the charectors user wanted and save them to finalPassword Var.
+ //TODO: I need a for loop to loop over my final array, it should run based on relts of the prompt when we asked user how many charectors they like password. Choose randomly from final array that holds the charectors user wanted and save them to finalPassword Var.
 
 //   //*****
 //   //var randNum = Math.floor(Math.random() * newPassarray) 
@@ -161,9 +133,9 @@ function generatePassword(){
   
 
 
-//   //"return" data last outside of for loop
+//"return" data last outside of for loop
 
-// }
+
 
   
 // // Add event listener to generate button
