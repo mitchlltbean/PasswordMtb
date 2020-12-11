@@ -7,12 +7,12 @@
 //var finalArray =  
 //TODO: create an empty array for user requested charecters
 var newPassarray = []
-//var bigArray= []
+var bigArray= newPassarray.join(' ').trim()
 
 
 
-//TODO:
-//TODO: use mathrandom to pull from array var's
+
+
 
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
@@ -29,14 +29,15 @@ function writePassword() {
 //TODO:create a generatePassword funtion with all logic inside
 
 function generatePassword(){
- 
- // var passLength = prompt("How long ? (8-128)")
- //   if (passLength<8 || passLength>128){
- //     alert("plz select a proper charector")
- //     return
- //   }
+ //create prompt  to ask user how long they want password tobe and set to var. Also user edge case of 8 to 128 charectors.
+     
+ var passLength = prompt("How long ? (8-128)")
+   if (passLength<8 || passLength>128){
+     alert("plz select a proper charector")
+     return
+   }
   
-  //TODO: create confirm to ask user if they want capital letters set to a variable
+  //create confirm to ask user if they want capital letters set to a variable
   var upperselect = confirm("Would u like uppercase letters in password?")
             
     if(upperselect === true){
@@ -50,7 +51,7 @@ function generatePassword(){
 
       newPassarray.push(upperCase[finalArrayupper])
 
-      //bigArray = bigArray.concat(upperCase)
+      bigArray = bigArray.concat(upperCase)
     }   
     
  // return(newPassarray)   
@@ -61,7 +62,7 @@ function generatePassword(){
 //     //}
 
 
-//   //TODO: create confirm to ask user if they want lower letters set to a variable
+//   //create confirm to ask user if they want lower letters set to a variable
 
   var lowerselect = confirm("Would u like lowercase letters in password?")
             
@@ -75,18 +76,18 @@ function generatePassword(){
     console.log(lowerCase[finalArrayupper])
       //push whole ar
     newPassarray.push(lowerCase[finalArrayupper])
-//     bigArray = bigArray.concat(lowerCase)
+    bigArray = bigArray.concat(lowerCase)
   } 
 
 //   //  return(newPassarray)
 //  // }
 
-//   //TODO: create confirm  to ask user if they want numbers set to a variable
+//   //create confirm  to ask user if they want numbers set to a variable
 
   var numselect = confirm("Would u like numbers in password?")
             
   if(numselect === true){
-    var number = ["1" , "2" , "3" , "4" , "5" , "6" , "7" , "8" , "9" ,];
+    var number = ["1" , "2" , "3" , "4" , "5" , "6" , "7" , "8" , "9"];
     
     var finalArrayupper = (Math.floor(Math.random() * number.length));
     
@@ -95,13 +96,13 @@ function generatePassword(){
     console.log(number[finalArrayupper])
       //push whole ar
     newPassarray.push(number[finalArrayupper])
-//     bigArray = bigArray.concat(number)
+    bigArray = bigArray.concat(number)
   }
   
 //   //  return(newPassarray)
 
 //   //}
-//   //TODO: create confirm  to ask user if they want special charecters set to a variable
+//   //create confirm  to ask user if they want special charecters set to a variable
 
   var charselect = confirm("Would u like special charectors in password?")
             
@@ -115,29 +116,32 @@ function generatePassword(){
       console.log(char[finalArrayupper])
         //push whole ar
       newPassarray.push(char[finalArrayupper])
- //     bigArray = bigArray.concat(char)
+      bigArray = bigArray.concat(char)
 //      console.log(bigArray)
     }
-  return(newPassarray)
+    
+    //TODO: create a condition to make sure that the user has chosen at least 1 type of charector.
+     
+   // if(newPassarray === 0){
+    //  alert("plz select at least 1")
+    //  return
+
+   // }
+    
+  
+  
+  
+  return(bigArray)
+
 }
   
-//   //TODO: create prompt  to ask user how long they want password tobe and set to var. Also user edge case of 8 to 128 charectors.
+
 
   
 
 
 
 
-//   //TODO: create a condition to make sure that the user has chosen at least 1 type of charector.
-
-  
-//  // var passLength = prompt("How long ? (8-128)")
-//    // if (passLength<8 || passLength>128){
-//    //   alert("plz select a proper charector")
-      
-//  //   }
-
-  
 
   
 
